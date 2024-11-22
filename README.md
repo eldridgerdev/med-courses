@@ -1,5 +1,7 @@
 # Med course finder
 
+[Live Site](https://med-courses.vercel.app/)
+
 ## Feature List
 
 - [ ]
