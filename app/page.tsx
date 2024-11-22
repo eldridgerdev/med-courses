@@ -9,25 +9,40 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { HTMLAttributes } from "react";
+import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
-const CourseCard = ({ data }: { data: (typeof testData.content)[number] }) => {
+interface CourseCardProps extends HTMLAttributes<HTMLDivElement> {
+  data: (typeof testData.content)[number];
+}
+const CourseCard = ({ data, className }: CourseCardProps) => {
   return (
-    <>
-      <Card>
-        <CardHeader>
-          <CardTitle>{data.title}</CardTitle>
-          <CardDescription>desc</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div dangerouslySetInnerHTML={{ __html: data.brief_description }} />
-        </CardContent>
-        <CardFooter>
-          {data.instructors.map((ins, i) => (
-            <p key={i}>{ins.name_without_ending}, </p>
-          ))}
-        </CardFooter>
-      </Card>
-    </>
+    <Card className={cn("w-[400px] overflow-hidden", className)}>
+      <Image
+        className=""
+        width={400}
+        height={200}
+        src={data.hero_image}
+        alt="picture for the course"
+      />
+      <CardHeader>
+        <CardTitle>{data.title}</CardTitle>
+        <CardDescription className="hidden">desc</CardDescription>
+      </CardHeader>
+      <Separator className="mb-3" />
+      <CardContent className="hidden">
+        <div dangerouslySetInnerHTML={{ __html: data.brief_description }} />
+      </CardContent>
+      <CardFooter className="flex flex-col">
+        <span>Taught By:</span>
+        {data.instructors.map((ins, i) => (
+          <div key={i} className="flex">
+            <p>{ins.name_without_ending}</p>
+          </div>
+        ))}
+      </CardFooter>
+    </Card>
   );
 };
 export default function Home() {
@@ -35,13 +50,12 @@ export default function Home() {
     <>
       <TopNav />
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-          <div className="overflow-hidden gap-8 rounded-[0.5rem] border bg-background shadow bg-green-50">
-            <div className="items-start justify-center gap-6 rounded-lg p-8 md:grid lg:grid-cols-2 xl:grid-cols-3">
-              {testData.content.map((data) => (
-                <CourseCard key={data.title} data={data} />
-              ))}
-            </div>
+        <main className="flex flex-col row-start-2 items-center sm:items-start rounded-[0.5rem] border bg-background shadow w-full bg-slate-500">
+          <div className="w-full items-start justify-center gap-10 rounded-lg p-8 flex flex-wrap flex-row flex-basis-0 grow-0">
+            {/*<div className="items-start justify-center gap-6 rounded-lg p-8 md:grid lg:grid-cols-2 xl:grid-cols-3">*/}
+            {testData.content.map((data) => (
+              <CourseCard key={data.title} data={data} />
+            ))}
           </div>
         </main>
       </div>
