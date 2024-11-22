@@ -11,6 +11,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // @TODO: Temporary until landing page is built
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/courses",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
