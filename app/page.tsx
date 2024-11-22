@@ -1,3 +1,4 @@
+"use client";
 import TopNav from "@/components/custom/navigation/top-navigation";
 import Image from "next/image";
 import testData from "@/testData/medbridge-courses.json";
@@ -12,37 +13,40 @@ import {
 import { HTMLAttributes } from "react";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface CourseCardProps extends HTMLAttributes<HTMLDivElement> {
   data: (typeof testData.content)[number];
 }
 const CourseCard = ({ data, className }: CourseCardProps) => {
   return (
-    <Card className={cn("w-[400px] overflow-hidden", className)}>
-      <Image
-        className=""
-        width={400}
-        height={200}
-        src={data.hero_image}
-        alt="picture for the course"
-      />
-      <CardHeader>
-        <CardTitle>{data.title}</CardTitle>
-        <CardDescription className="hidden">desc</CardDescription>
-      </CardHeader>
-      <Separator className="mb-3" />
-      <CardContent className="hidden">
-        <div dangerouslySetInnerHTML={{ __html: data.brief_description }} />
-      </CardContent>
-      <CardFooter className="flex flex-col">
-        <span>Taught By:</span>
-        {data.instructors.map((ins, i) => (
-          <div key={i} className="flex">
-            <p>{ins.name_without_ending}</p>
-          </div>
-        ))}
-      </CardFooter>
-    </Card>
+    <motion.section whileHover={{ scale: 1.1 }}>
+      <Card className={cn("w-[400px] overflow-hidden", className)}>
+        <Image
+          className=""
+          width={400}
+          height={200}
+          src={data.hero_image}
+          alt="picture for the course"
+        />
+        <CardHeader>
+          <CardTitle>{data.title}</CardTitle>
+          <CardDescription className="hidden">desc</CardDescription>
+        </CardHeader>
+        <Separator className="mb-3" />
+        <CardContent className="hidden">
+          <div dangerouslySetInnerHTML={{ __html: data.brief_description }} />
+        </CardContent>
+        <CardFooter className="flex flex-col">
+          <span>Taught By:</span>
+          {data.instructors.map((ins, i) => (
+            <div key={i} className="flex">
+              <p>{ins.name_without_ending}</p>
+            </div>
+          ))}
+        </CardFooter>
+      </Card>
+    </motion.section>
   );
 };
 export default function Home() {
