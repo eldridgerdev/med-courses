@@ -116,7 +116,12 @@ export default function TopNav() {
             {navLinks.map((nav) => (
               <NavigationMenuItem key={nav.id}>
                 <Link href={nav.href} legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <NavigationMenuLink
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      "bg-transparent",
+                    )}
+                  >
                     {nav.title}
                   </NavigationMenuLink>
                 </Link>
