@@ -1,6 +1,4 @@
 "use client";
-import testData from "@/testData/medbridge-courses.json";
-import CourseCard from "./courses/CourseCard";
 
 export default function Home() {
   return (

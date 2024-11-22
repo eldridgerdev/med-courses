@@ -16,7 +16,6 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { NavigationMenuItem } from "@radix-ui/react-navigation-menu";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect, HTMLAttributes } from "react";
