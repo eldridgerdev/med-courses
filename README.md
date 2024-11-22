@@ -7,6 +7,7 @@
 - [x] Basic Sidebar skeleton
 - [x] Course Cards
 - [ ] custom theme
+- [ ] Small screen sidebar
 - [ ] Scrape web for more data
 - [ ] Build landing page
 - [ ] Course specific page or drawer
