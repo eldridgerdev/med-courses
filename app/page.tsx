@@ -23,9 +23,7 @@ const CourseCard = ({ data }: { data: (typeof testData.content)[number] }) => {
         </CardContent>
         <CardFooter>
           {data.instructors.map((ins, i) => (
-            <>
-              <p key={i}>{ins.name_without_ending}, </p>
-            </>
+            <p key={i}>{ins.name_without_ending}, </p>
           ))}
         </CardFooter>
       </Card>
@@ -38,8 +36,8 @@ export default function Home() {
       <TopNav />
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-          <div className="overflow-hidden gap-8 rounded-[0.5rem] border bg-background shadow">
-            <div className="hidden items-start justify-center gap-6 rounded-lg p-8 md:grid lg:grid-cols-2 xl:grid-cols-3">
+          <div className="overflow-hidden gap-8 rounded-[0.5rem] border bg-background shadow bg-green-50">
+            <div className="items-start justify-center gap-6 rounded-lg p-8 md:grid lg:grid-cols-2 xl:grid-cols-3">
               {testData.content.map((data) => (
                 <CourseCard key={data.title} data={data} />
               ))}
