@@ -2,6 +2,7 @@
 import testData from "@/testData/medbridge-courses.json";
 import CourseCard from "./CourseCard";
 
+// @TODO: Think about "main" usage
 export default function Home() {
   return (
     <>

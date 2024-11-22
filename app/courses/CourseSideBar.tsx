@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
+// @TODO: Test data
 const items = [
   {
     title: "Home",
