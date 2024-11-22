@@ -2,7 +2,8 @@
 
 import { redirect } from "next/navigation";
 
-export async function Home() {
+export default async function Home() {
+  // @TODO: Temporary until landing page is built
   redirect("/courses");
   return (
     <>
