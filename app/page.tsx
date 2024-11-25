@@ -8,11 +8,9 @@ export default async function Home() {
   // @TODO: Temporary until landing page is built
   // redirect("/courses");
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex-1">
-        <Hero />
-        <CTA />
-      </main>
-    </div>
+    <main className="flex-1">
+      <Hero />
+      <CTA />
+    </main>
   );
 }
