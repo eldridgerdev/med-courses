@@ -33,8 +33,8 @@ const navLinks: NavLink[] = [
   },
   {
     id: 1,
-    title: "Features",
-    href: "/",
+    title: "Courses",
+    href: "/courses",
   },
   {
     id: 2,
