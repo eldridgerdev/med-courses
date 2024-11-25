@@ -2,8 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import React from "react";
+import Form from "next/form";
+import { redirect } from "next/navigation";
 
 const Hero = () => {
+  async function searchCourses(formData: FormData) {
+    "use server";
+    redirect(`/courses?query=${formData.get("query")}`);
+  }
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
       <div className="flex flex-col items-center space-y-4 text-center">
@@ -17,8 +23,9 @@ const Hero = () => {
           </p>
         </div>
         <div className="w-full max-w-sm space-y-2">
-          <form className="flex space-x-2">
+          <Form action={searchCourses} className="flex space-x-2">
             <Input
+              name="query"
               className="max-w-lg flex-1"
               placeholder="Enter your profession or interest"
               type="text"
@@ -30,7 +37,7 @@ const Hero = () => {
               <Search className="mr-2 h-4 w-4" />
               Find Courses
             </Button>
-          </form>
+          </Form>
         </div>
       </div>
     </section>

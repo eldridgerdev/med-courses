@@ -127,7 +127,7 @@ export default function TopNav() {
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),
-                      "bg-transparent hover:bg-transparent hover:underline underline-offset-4",
+                      "bg-transparent hover:bg-transparent hover:underline underline-offset-4 font-medium",
                     )}
                   >
                     {nav.title}
