@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { NavigationMenuItem } from "@radix-ui/react-navigation-menu";
-import { Menu } from "lucide-react";
+import { Menu, BookOpen } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect, HTMLAttributes } from "react";
 
@@ -51,6 +51,7 @@ const navLinks: NavLink[] = [
 const Logo = (props: HTMLAttributes<HTMLDivElement>) => (
   <Link href="/" className={`flex items-center space-x-2 ${props.className}`}>
     <span className="text-xl font-bold">Logo</span>
+    <BookOpen />
   </Link>
 );
 

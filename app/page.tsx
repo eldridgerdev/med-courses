@@ -1,19 +1,18 @@
 "use-server";
 
+import CTA from "@/components/custom/ui/CTA";
+import Hero from "@/components/custom/ui/Hero";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
   // @TODO: Temporary until landing page is built
-  redirect("/courses");
+  // redirect("/courses");
   return (
-    <>
-      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <main className="flex flex-col row-start-2 items-center sm:items-start rounded-[0.5rem] border bg-background shadow w-full">
-          <div
-            className={`w-full items-start justify-center gap-10 rounded-lg p-8 flex flex-wrap flex-row flex-basis-0 grow-0 bg-bgp`}
-          ></div>
-        </main>
-      </div>
-    </>
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-1">
+        <Hero />
+        <CTA />
+      </main>
+    </div>
   );
 }

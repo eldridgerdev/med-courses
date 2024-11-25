@@ -11,7 +11,8 @@
 - [ ] custom theme
 - [ ] Small screen sidebar
 - [ ] Scrape web for more data
-- [ ] Build landing page
+- [x] Build landing page
+- [ ] Customize landing page once we can actually do stuff
 - [ ] Course specific page or drawer
 - [ ] Link to course
 - [ ] Find a way to normalize data from different sources
