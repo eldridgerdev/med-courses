@@ -33,17 +33,22 @@ const navLinks: NavLink[] = [
   },
   {
     id: 1,
-    title: "Test1",
+    title: "Features",
     href: "/",
   },
   {
     id: 2,
-    title: "Test2",
+    title: "Pricing",
     href: "/",
   },
   {
     id: 3,
-    title: "Test3",
+    title: "About",
+    href: "/",
+  },
+  {
+    id: 4,
+    title: "Contact",
     href: "/",
   },
 ];
@@ -73,11 +78,14 @@ const SmallScreenMenu = (props: HTMLAttributes<HTMLDivElement>) => (
             <SheetDescription>Sidebar</SheetDescription>
           </SheetHeader>
           <nav className="flex flex-col space-y-4">
+            {/*
+                className="text-sm font-medium transition-colors hover:text-primary"
+ */}
             {navLinks.map((item: NavLink) => (
               <Link
                 key={item.id}
                 href={item.href}
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className="text-sm font-medium transition-colors hover:underline"
               >
                 {item.title}
               </Link>
@@ -119,7 +127,7 @@ export default function TopNav() {
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),
-                      "bg-transparent",
+                      "bg-transparent hover:bg-transparent hover:underline underline-offset-4",
                     )}
                   >
                     {nav.title}

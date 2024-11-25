@@ -23,7 +23,10 @@ const Hero = () => {
               placeholder="Enter your profession or interest"
               type="text"
             />
-            <Button type="submit">
+            <Button
+              type="submit"
+              className="bg-foreground hover:bg-muted-foreground"
+            >
               <Search className="mr-2 h-4 w-4" />
               Find Courses
             </Button>

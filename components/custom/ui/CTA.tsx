@@ -4,7 +4,7 @@ import { Award, BookOpen, Zap } from "lucide-react";
 const CTA = () => {
   return (
     <>
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+      <section className="w-full py-12 px-8 md:px-18 lg:px-22 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="p-4 bg-white rounded-full dark:bg-gray-900">
@@ -50,7 +50,9 @@ const CTA = () => {
             </p>
           </div>
           <div className="space-x-4">
-            <Button>Get Started for Free</Button>
+            <Button className="bg-foreground hover:bg-muted-foreground">
+              Get Started for Free
+            </Button>
             <Button variant="outline">Learn More</Button>
           </div>
         </div>
