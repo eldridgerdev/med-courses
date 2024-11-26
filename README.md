@@ -11,10 +11,17 @@
 - [ ] custom theme
 - [ ] Small screen sidebar
 - [ ] Scrape web for more data
-- [x] Build landing page
+- [x] Build basic landing page
+- [ ] Spend more than 2s on wording
 - [ ] Customize landing page once we can actually do stuff
 - [ ] Course specific page or drawer
 - [ ] Link to course
+- [ ] Backend stuff
+
+  - [ ] Call Data API
+  - [ ] Save Data to DB
+  - [ ] User Login + Auth
+
 - [ ] Find a way to normalize data from different sources
 - [ ] Filter by type
 - [ ] Filter by cost
