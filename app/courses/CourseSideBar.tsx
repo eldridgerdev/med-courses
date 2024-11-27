@@ -10,6 +10,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
 // @TODO: Test data
@@ -43,7 +44,7 @@ const items = [
 
 export default function CoursesSidebar() {
   return (
-    <Sidebar>
+    <Sidebar className={cn("min-h-[calc(100vh-4rem)] h-4")}>
       <SidebarHeader />
       <SidebarContent className="mt-20">
         <SidebarGroup>

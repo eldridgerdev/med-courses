@@ -22,7 +22,6 @@ export default function CourseCard({ data, className }: CourseCardProps) {
     <motion.section whileHover={{ scale: 1.1 }}>
       <Card className={cn("w-[400px] overflow-hidden", className)}>
         <Image
-          className=""
           width={400}
           height={200}
           src={data.hero_image}
