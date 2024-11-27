@@ -19,26 +19,28 @@
 - [ ] Customize landing page once we can actually do stuff
 - [ ] Course specific page or drawer
 - [ ] Link to course
-- [ ] Backend stuff
+- [ ] Backend:
 
   - [ ] Call Data API
   - [ ] Save Data to DB
   - [ ] User Login + Auth
 
-- [ ] Find a way to normalize data from different sources
+- [ ] Normalize data from different sources
 - [ ] Filter by type
 - [ ] Filter by cost
 - [ ] Filter by location/remote
 - [ ] Users
   - [ ] Active subscriptions
   - [ ] Ratings
-- [ ] Expand past just PT
+  - [ ] Login
+  - [ ] User Management
+- [ ] Expand past PT
 
 ## Ideas
 
 ## Bugs
 
-- [ ] Find Courses button from Landing page takes way too long
+- [ ] Find Courses button from Landing page takes too long
 
 ## Getting Started
 
