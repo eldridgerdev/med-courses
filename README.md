@@ -8,6 +8,9 @@
 - [x] Basic TopNav
 - [x] Basic Sidebar skeleton
 - [x] Course Cards
+- [ ] Loading Page
+- [ ] 404 Page
+- [ ] Error Page
 - [ ] custom theme
 - [ ] Small screen sidebar
 - [ ] Scrape web for more data
@@ -34,6 +37,8 @@
 ## Ideas
 
 ## Bugs
+
+- [ ] Find Courses button from Landing page takes way too long
 
 ## Getting Started
 
