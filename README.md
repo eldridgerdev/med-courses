@@ -8,8 +8,8 @@
 - [x] Basic TopNav
 - [x] Basic Sidebar skeleton
 - [x] Course Cards
-- [ ] Loading Page
-- [ ] 404 Page
+- [x] Loading Page
+- [ ] Fancier Loading Page
 - [ ] Error Page
 - [ ] custom theme
 - [ ] Small screen sidebar
