@@ -24,6 +24,7 @@ interface NavLink {
   title: string;
   href: string;
   id: number;
+  disabled?: boolean;
 }
 const navLinks: NavLink[] = [
   {
@@ -40,16 +41,19 @@ const navLinks: NavLink[] = [
     id: 2,
     title: "Pricing",
     href: "/",
+    disabled: true,
   },
   {
     id: 3,
     title: "About",
     href: "/",
+    disabled: true,
   },
   {
     id: 4,
     title: "Contact",
     href: "/",
+    disabled: true,
   },
 ];
 
@@ -85,9 +89,14 @@ const SmallScreenMenu = (props: HTMLAttributes<HTMLDivElement>) => (
               <Link
                 key={item.id}
                 href={item.href}
-                className="text-sm font-medium transition-colors hover:underline"
+                className={cn(
+                  "text-sm font-medium transition-colors hover:underline",
+                  item.disabled && "line-through",
+                )}
               >
-                {item.title}
+                <span className={cn(item.disabled && "line-through")}>
+                  {item.title}
+                </span>
               </Link>
             ))}
           </nav>
@@ -128,6 +137,7 @@ export default function TopNav() {
                     className={cn(
                       navigationMenuTriggerStyle(),
                       "bg-transparent hover:bg-transparent hover:underline underline-offset-4 font-medium",
+                      nav.disabled && "line-through pointer-events-none",
                     )}
                   >
                     {nav.title}
