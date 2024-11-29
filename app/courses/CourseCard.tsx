@@ -1,3 +1,4 @@
+"use client";
 import { HTMLAttributes } from "react";
 import testData from "@/testData/medbridge-courses.json";
 import { motion } from "framer-motion";
