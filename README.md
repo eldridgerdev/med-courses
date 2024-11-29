@@ -26,6 +26,8 @@
   - [ ] User Login + Auth
 
 - [ ] Normalize data from different sources
+- [x] Search filter
+- [ ] Make search filter more robust and fuzzy
 - [ ] Filter by type
 - [ ] Filter by cost
 - [ ] Filter by location/remote
