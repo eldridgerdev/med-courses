@@ -28,6 +28,8 @@
 - [ ] Normalize data from different sources
 - [x] Search filter
 - [ ] Make search filter more robust and fuzzy
+- [ ] Fix search bar aesthetics
+- [ ] Fix Course page component organization
 - [ ] Filter by type
 - [ ] Filter by cost
 - [ ] Filter by location/remote
