@@ -10,8 +10,8 @@ import Form from "next/form";
 export default function SearchInput({ text }: { text: string | undefined }) {
   const [query, setQuery] = useState(text || "");
   const router = useRouter();
-  async function searchCourses(formData: FormData) {
-    router.push(`/courses?query=${formData.get("query")}`);
+  function searchCourses() {
+    router.push(`/courses${query && `?query=${query}`}`);
   }
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +20,9 @@ export default function SearchInput({ text }: { text: string | undefined }) {
 
   const handleClear = () => {
     setQuery("");
+    router.push(`/courses`);
   };
+
   return (
     <div className="flex flex-row justify-center items-center h-3/4 gap-3 border-black border px-3 rounded-full">
       <Form action={searchCourses} className="flex space-x-2">
