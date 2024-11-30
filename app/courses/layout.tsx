@@ -6,7 +6,9 @@ import { cn } from "@/lib/utils";
 export default function CoursesLayout({ children }: { children: ReactNode }) {
   return (
     <SidebarProvider className={cn("min-h-[calc(100vh-4rem)]")}>
+      {/*
       <CoursesSidebar />
+      */}
       {children}
     </SidebarProvider>
   );
