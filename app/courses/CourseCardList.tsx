@@ -33,6 +33,10 @@ export default function CourseCardList({ query }: { query: Query }) {
       {filteredCourses.length > 0 &&
         filteredCourses.map((data: (typeof testData.content)[0]) => (
           <motion.div
+            layout
+            transition={{
+              duration: 0.5,
+            }}
             key={data.title}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
