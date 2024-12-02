@@ -44,8 +44,6 @@
 
 ## Bugs
 
-- [ ] Find Courses button from Landing page takes too long
-
 ## Getting Started
 
 ### Development server
