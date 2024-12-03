@@ -8,3 +8,7 @@ export const courses = pgTable("courses", {
   hero_image: varchar("hero_image", { length: 256 }).notNull(),
   instructors: varchar("instructors", { length: 256 }).notNull().array(),
 });
+export const categories = pgTable("categories", {
+  id: integer().primaryKey(),
+  categories: varchar("instructors", { length: 256 }).notNull().array(),
+});

@@ -1,27 +1,12 @@
 "use client";
-import testData from "@/testData/medbridge-courses.json";
-import testCategories from "@/testData/medbridge-course-categories.json";
 import CourseCard from "./CourseCard";
 import { AnimatePresence, motion } from "framer-motion";
-type Query = string | undefined;
-// @TODO: Better type management from testdata once it's real
-// @TODO:Better searching
+import { Course } from "./types";
 
-export default function CourseCardList({ query }: { query: Query }) {
-  const filteredCourses = !query
-    ? testData.content
-    : testData.content.filter((course) => {
-        const categories = testCategories.data.find(
-          (cat) => cat.id === course.id,
-        )?.categories;
-        return categories?.some(
-          (category) => category.toLowerCase() === query.toLowerCase(),
-        );
-      });
-
+export default function CourseCardList({ courses }: { courses: Course[] }) {
   return (
     <AnimatePresence>
-      {filteredCourses.length === 0 && (
+      {courses.length === 0 && (
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -30,8 +15,8 @@ export default function CourseCardList({ query }: { query: Query }) {
           NO COURSES FOUND
         </motion.h2>
       )}
-      {filteredCourses.length > 0 &&
-        filteredCourses.map((data: (typeof testData.content)[0]) => (
+      {courses.length > 0 &&
+        courses.map((data) => (
           <motion.div
             layout
             transition={{

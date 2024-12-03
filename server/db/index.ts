@@ -1,7 +1,7 @@
 import { drizzle } from "drizzle-orm/vercel-postgres";
 import * as schema from "./schema";
-import { eq } from "drizzle-orm";
 import { sql } from "@vercel/postgres";
+
 import testData from "@/testData/medbridge-courses.json";
 
 export const db = drizzle(sql, { schema });
@@ -30,4 +30,3 @@ async function buildCourseExample() {
 async function main() {
   buildCourseExample();
 }
-main();
