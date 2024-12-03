@@ -34,9 +34,11 @@ export default function SearchInput({ text }: { text: string | undefined }) {
           inputFocus && "ring-blue-700 ring-2 border-none",
         )}
         layout
-        layoutId="test"
         transition={{
           duration: 0.2,
+          staggerChildren: 0.2,
+          ease: "easeInOut",
+          when: "afterChildren",
         }}
       >
         <Form
@@ -54,7 +56,7 @@ export default function SearchInput({ text }: { text: string | undefined }) {
             value={query}
             onChange={handleChange}
           />
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {query && (
               <motion.div
                 className="flex flex-row items-center h-full"

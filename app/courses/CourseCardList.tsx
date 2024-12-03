@@ -23,9 +23,9 @@ export default function CourseCardList({ courses }: { courses: Course[] }) {
               duration: 0.5,
             }}
             key={data.title}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 0 }}
           >
             <CourseCard data={data} />
           </motion.div>
