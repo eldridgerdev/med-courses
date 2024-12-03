@@ -11,6 +11,7 @@
 - [x] Loading Page
 - [ ] Fancier Loading Page
 - [ ] Error Page
+- [ ] 404 Page
 - [ ] custom theme
 - [ ] Small screen sidebar
 - [ ] Scrape web for more data
