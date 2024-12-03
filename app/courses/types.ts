@@ -3,5 +3,5 @@ export interface Course {
   title: string;
   brief_description: string;
   hero_image: string;
-  instructors: string[];
+  instructors: string[] | null;
 }

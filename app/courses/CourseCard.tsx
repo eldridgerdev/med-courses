@@ -19,7 +19,7 @@ interface CourseCardProps extends HTMLAttributes<HTMLDivElement> {
 }
 export default function CourseCard({ data, className }: CourseCardProps) {
   return (
-    <motion.section whileHover={{ scale: 1.1 }}>
+    <motion.section whileHover={{ scale: 1.1, rotate: "1deg" }}>
       <Card className={cn("w-[400px] overflow-hidden", className)}>
         <Image
           width={400}
@@ -37,11 +37,12 @@ export default function CourseCard({ data, className }: CourseCardProps) {
         </CardContent>
         <CardFooter className="flex flex-col">
           <span>Taught By:</span>
-          {data.instructors.map((ins, i) => (
-            <div key={i} className="flex">
-              <p>{ins}</p>
-            </div>
-          ))}
+          {data.instructors &&
+            data.instructors.map((ins, i) => (
+              <div key={i} className="flex">
+                <p>{ins}</p>
+              </div>
+            ))}
         </CardFooter>
       </Card>
     </motion.section>

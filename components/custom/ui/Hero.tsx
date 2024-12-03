@@ -15,15 +15,15 @@ const Hero = () => {
       <div className="flex flex-col items-center space-y-4 text-center">
         <div className="space-y-2">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-            Find Your Perfect CEU Course with AI
+            Find Your Perfect CEU Course with our AI assistant
           </h1>
           <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
             Discover tailored continuing education courses that match your
             career goals and interests, powered by advanced AI technology.
           </p>
         </div>
-        <div className="w-full max-w-sm space-y-2">
-          <Form action={searchCourses} className="flex space-x-2">
+        <div className="w-full max-w-md space-y-2">
+          <Form action={searchCourses} className="flex space-x-2 ">
             <Input
               name="query"
               className="max-w-lg flex-1"
