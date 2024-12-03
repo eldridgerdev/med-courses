@@ -24,6 +24,7 @@
   - [ ] Call Data API
   - [ ] Save Data to DB
   - [ ] User Login + Auth
+  - [ ] Clean database of expired courses
 
 - [ ] Normalize data from different sources
 - [x] Search filter
