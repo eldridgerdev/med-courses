@@ -29,15 +29,15 @@ export default function SearchInput({ text }: { text: string | undefined }) {
   return (
     <LayoutGroup id="test">
       <motion.div
+        className={cn(
+          "h-3/4 border-black border px-3 rounded-full",
+          inputFocus && "ring-blue-700 ring-2 border-none",
+        )}
         layout
         layoutId="test"
         transition={{
           duration: 0.2,
         }}
-        className={cn(
-          "h-3/4 border-black border px-3 rounded-full",
-          inputFocus && "ring-blue-700 ring-2 border-none",
-        )}
       >
         <Form
           action={searchCourses}
@@ -45,6 +45,7 @@ export default function SearchInput({ text }: { text: string | undefined }) {
         >
           <Search className="h-6 w-6 transform text-muted-foreground" />
           <Input
+            className="pl-8 pr-10 h-4/5 border-none shadow-none focus:!ring-0"
             onFocus={() => setInputFocus(true)}
             onBlur={() => setInputFocus(false)}
             name="query"
@@ -52,11 +53,11 @@ export default function SearchInput({ text }: { text: string | undefined }) {
             placeholder="Search..."
             value={query}
             onChange={handleChange}
-            className="pl-8 pr-10 h-4/5 border-none shadow-none focus:!ring-0"
           />
           <AnimatePresence>
             {query && (
               <motion.div
+                className="flex flex-row items-center h-full"
                 layout
                 layoutId="test"
                 transition={{
@@ -72,16 +73,15 @@ export default function SearchInput({ text }: { text: string | undefined }) {
                   opacity: 0,
                   duration: 0.1,
                 }}
-                className="flex flex-row items-center h-full"
               >
                 <Button type="submit" size={"sm"} className="rounded-full">
                   Submit
                 </Button>
                 <Button
+                  className="transform h-5/6 rounded-full hover:bg-slate-400 "
                   onClick={handleClear}
                   variant={"ghost"}
                   size="sm"
-                  className="transform h-5/6 rounded-full hover:bg-slate-400 "
                 >
                   <X className="" />
                   <span className="sr-only">Clear search</span>
