@@ -3,6 +3,7 @@ import SearchInput from "./SearchInput";
 import CourseCardList from "./CourseCardList";
 import { getCourses } from "@/server/queries";
 import testCategories from "@/testData/medbridge-course-categories.json";
+import realTestCategories from "@/testData/medbridge-api-course-categories.json";
 
 type SearchParams = Promise<{ [key: string]: string | undefined }>;
 export default async function CoursePage({
@@ -29,7 +30,7 @@ export default async function CoursePage({
   return (
     <>
       <main className={`flex flex-col bg-bgp w-full items-center flex-grow`}>
-        <div className="h-16 w-1/2 flex items-center">
+        <div className="h-16 w-3/5 flex items-center">
           <div className="w-full h-3/4 gap-10 bg-white rounded-full flex items-center justify-center  shadow-black shadow-sm ">
             <SearchInput text={(await searchParams).query || ""} />
             <div className="h-full flex flex-row justify-center items-center">
